@@ -1,12 +1,12 @@
 # WordPiece Tokenization
 
-## 📌 Project Overview
+## Project Overview
 
 This project demonstrates **WordPiece Tokenization**, a subword tokenization technique widely used in Natural Language Processing (NLP) models such as **BERT**.
 
 WordPiece breaks words into smaller subword units. This helps NLP models handle unknown words, rare words, and different word forms more effectively.
 
-## 🎯 Objectives
+## Objectives
 
 * Understand the concept of WordPiece Tokenization
 * Learn how words are divided into subword tokens
@@ -14,7 +14,7 @@ WordPiece breaks words into smaller subword units. This helps NLP models handle 
 * Understand the role of subword tokenization in NLP
 * Implement WordPiece Tokenization using Python
 
-## 🔍 How WordPiece Tokenization Works
+## How WordPiece Tokenization Works
 
 WordPiece starts with smaller units and combines them based on their frequency and usefulness in the training data.
 
@@ -27,7 +27,7 @@ Unwanted → un + ##wanted
 
 The `##` symbol indicates that the token is a continuation of the previous token.
 
-## 🧠 Example
+## Example
 
 Input:
 
@@ -43,14 +43,14 @@ Possible WordPiece tokens:
 
 The tokens can then be converted into numerical **Token IDs**, which are given as input to an NLP model.
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 * Python
 * NLP
 * Hugging Face Transformers
 * BERT Tokenizer
 
-## 📦 Installation
+## Installation
 
 Install the required library:
 
@@ -58,7 +58,7 @@ Install the required library:
 pip install transformers
 ```
 
-## 💻 Implementation
+## Implementation
 
 ```python
 from transformers import BertTokenizer
@@ -76,7 +76,7 @@ token_ids = tokenizer.convert_tokens_to_ids(tokens)
 print("Token IDs:", token_ids)
 ```
 
-## 📊 Output
+## Output
 
 Example output:
 
@@ -88,9 +88,35 @@ Token IDs: [1045, 2572, 2652, 2374]
 
 The exact output depends on the tokenizer and vocabulary being used.
 
-## ⭐ Advantages
+## Advantages
 
 * Handles rare and unknown words better than word-level tokenization
 * Reduces the problem of out-of-vocabulary words
 * Can represent new words using smaller subword units
-* Useful for multilingual and large-sca
+* Useful for multilingual and large-scale NLP applications
+* Used in models such as BERT
+
+## Limitations
+
+* Tokenized text can contain many subword tokens
+* Tokenization may increase the sequence length
+* Understanding individual subword tokens can sometimes be difficult
+
+## Applications
+
+WordPiece Tokenization is commonly used in:
+
+* Question Answering
+* Text Classification
+* Sentiment Analysis
+* Named Entity Recognition
+* Chatbots
+* Machine Translation
+* Search Engines
+* BERT-based NLP applications
+
+## Conclusion
+
+WordPiece Tokenization is an important NLP technique that represents words as smaller subword units. It provides a balance between word-level and character-level tokenization and helps modern NLP models handle vocabulary efficiently.
+
+This project provides a basic understanding and implementation of WordPiece Tokenization using the BERT tokenizer.
